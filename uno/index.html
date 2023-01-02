@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>yousmelllikepee.com</title>
+  </head>
+
+  <body>
+    <br/>
+    <center>
+      <div style="position: relative; width: 200px"><IMG SRC="yousmella.gif"></div>
+    </center>
+    <br/>
+    <center>
+      <big>
+        <div id="sequence"></div>
+      </big>
+    </center>
+    <script>
+      var example = ['real', 'super', 'stupid', 'disgusting'];
+
+      textSequence(0);
+      function textSequence(i) {
+
+          if (example.length > i) {
+              setTimeout(function() {
+                  document.getElementById("sequence").innerHTML = "you smell " + example[i] + " bad";
+                  textSequence(++i);
+              }, 1000); // 1 second (in milliseconds)
+
+          } else if (example.length == i) { // Loop
+              textSequence(0);
+          }
+
+      }
+  </script>
+  </body>
+</html>
